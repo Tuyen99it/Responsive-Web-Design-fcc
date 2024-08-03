@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widtd=width-device">
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="Quiz.css">
+</head>
+
+<body>
+    <header class="menu">
+        <img id="logo" alt="freecodecamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+        <h1>HTML/CSS Quiz</h1>
+        <nav class="menu-bar">
+            <ul>
+                <li><a href="#student-infor">INFO</a></li>
+                <li><a href="#html-question">HTML</a></li>
+                <li><a href="#css-question">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+            <section role="region" aria-labelledby="student-info">
+                <h2 id="student-info">Student Info</h2>
+                <div class="info">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="name" value="" required>
+                </div>
+                <div class="info">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" value="" required>
+                </div>
+                <div class="info">
+                    <label for="birth">D.O.B:<span class="sr-only">Date of Birth</span></label>
+                    <input id="birth" type="date" name="birth" value="" required>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="html-question">
+                <h2 id="" html-question>HTML</h2>
+                <div class="question-block">
+                    <h3>1</h3>
+                    <fieldset class="question" name="html-question-one">
+                        <legend>
+                            The legend element represents a caption for the content of its
+                            parent fieldset element
+                        </legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" id="q1-a1" name="q1" value="true" />
+                                    True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2">
+                                    <input type="radio" id="q1-a2" name="q1" value="false" />
+                                    False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <h3>2</h3>
+                    <fieldset class="question" name="html-question-two">
+                        <legend>
+                            A label element nesting an input element is required to have a
+                            for attribute with the same value as the input's id
+                        </legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1">
+                                    <input type="radio" id="q2-a1" name="q2" value="true" />
+                                    True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q2-a2">
+                                    <input type="radio" id="q2-a2" name="q2" value="false" />
+                                    False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="css-question">
+                <h2 id="css-questions">CSS</h2>
+                <div class="question-block">
+                    <fieldset class="css-question">
+                        <ledend>Can the css margin property accept negative values?</ledend>
+                        <div class="answer">
+                            <select name="selector">
+                                <option value="">Select an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <div clas="question-block">
+                    <fieldset class="css-question">
+                        <legend>Do you have any question?</legend>
+                        <div class="answer">
+                            <textarea id="css-textarea" name="css-question" rows="5" cols="24"
+                                placeholder="How is flexbox...">
+
+                            </textarea>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </section>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <footer>
+        <address>
+            <a href="https://freecodecamp.org">freecodecamp</a><br>
+            San Francisco<br>
+            USA
+        </address>
+    </footer>
+</body>
+
+</html>
