@@ -1,13 +1,16 @@
-* {
-    scroll-behavior: smooth;
+@media (feature:no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
 }
 
 body {
-    background: white;
+    background: #efebeb;
     color: #1B1B32;
     font-family: Helvetica;
     margin: 0;
     height: 100%;
+    letter-spacing: 0.15px
 }
 
 header {
@@ -34,6 +37,7 @@ h1 {
     font-size: min(5vw, 1.2em);
     text-align: center;
     display: block;
+    justify-content: center;
 
 }
 
@@ -129,6 +133,7 @@ section {
 h1,
 h2 {
     font-family: Verdana, Tahoma;
+
 }
 
 h2 {
